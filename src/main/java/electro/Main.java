@@ -1,5 +1,7 @@
 package electro;
 
+import electro.model.GuiMain;
+
 public class Main {
 
     public static GuiMain gui;

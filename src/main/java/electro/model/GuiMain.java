@@ -1,10 +1,10 @@
-package electro;
+package electro.model;
 
-import electro.Main;
 import electro.listeners.*;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.regex.Pattern;
 
 import javax.swing.*;
 
@@ -18,10 +18,10 @@ public class GuiMain {
     private JLabel textInfo5 = new JLabel("Коль-во рабочих дней");
     private JLabel outputResult;
 
-    private JTextField param = new JTextField("Введите число");
-    private JTextField param2 = new JTextField("Введите число");
-    private JTextField param3 = new JTextField("Введите число");
-    private JTextField param4 = new JTextField("Введите число");
+    private JTextField param = new JTextField("");
+    private JTextField param2 = new JTextField("");
+    private JTextField param3 = new JTextField("");
+    private JTextField param4 = new JTextField("");
 
     private String[] daysArr = {"1 день", "2 дня", "3 дня"
             , "4 дня", "5 дней", "6 дней", "7 дней"};
@@ -43,7 +43,7 @@ public class GuiMain {
         main_GUI.add(main_panel);
 
         addTextInfoLabelsOnPanel();
-        addTextFieldsOnPanel();
+        addTextFieldsOnPanelAndLimit();
 
         JLabel jLabel = createLabelOnPanel(label, main_panel);
         setBoundsForLabel(jLabel, 60,0,300,30);
@@ -74,16 +74,34 @@ public class GuiMain {
         main_GUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    private void addTextFieldsOnPanel() {
+    private InputVerifier limit() {
+        InputVerifier inputVerifier = new InputVerifier() {
+            @Override
+            public boolean verify(JComponent input) {
+                JTextField textField = (JTextField) input;
+                return Pattern.matches("[^a-zA-Z]+", textField.getText());
+            }
+            public boolean shouldYieldFocus(JComponent source, JComponent target) {
+                return verify(source);
+            }
+        };
+        return inputVerifier;
+    }
+
+    private void addTextFieldsOnPanelAndLimit() {
         main_panel.add(param).setBounds(400, 60, 150, 30);
         main_panel.add(param2).setBounds(400, 120, 150, 30);
         main_panel.add(param3).setBounds(400, 180, 150, 30);
         main_panel.add(param4).setBounds(400, 240, 150 ,30);
-        main_panel.add(numberOfDays).setBounds(350, 300, 150, 30);
+        main_panel.add(numberOfDays).setBounds(400, 300, 150, 30);
+        param.setInputVerifier(limit());
+        param2.setInputVerifier(limit());
+        param3.setInputVerifier(limit());
+        param4.setInputVerifier(limit());
     }
 
     private void addTextInfoLabelsOnPanel() {
-        main_panel.add(textInfo).setBounds(50, 50, 270, 50);
+        main_panel.add(textInfo).setBounds(50, 50, 290, 50);
         main_panel.add(textInfo2).setBounds(50, 110, 270, 50);
         main_panel.add(textInfo3).setBounds(50, 170, 270, 50);
         main_panel.add(textInfo4).setBounds(50, 230, 270, 50);
@@ -147,36 +165,4 @@ public class GuiMain {
         return daysArr;
     }
 
-    public JPanel getPanel() {
-        return main_panel;
-    }
-
-
-    public JLabel getLabelOutput() {
-        return outputResult;
-    }
-
-    public void setTextInfo(JLabel textInfo) {
-        this.textInfo = textInfo;
-    }
-
-    public void setParam(JTextField param) {
-        this.param = param;
-    }
-
-    public void setParam2(JTextField param2) {
-        this.param2 = param2;
-    }
-
-    public void setParam3(JTextField param3) {
-        this.param3 = param3;
-    }
-
-    public void setParam4(JTextField param4) {
-        this.param4 = param4;
-    }
-
-    public void setDaysArr(String[] daysArr) {
-        this.daysArr = daysArr;
-    }
 }

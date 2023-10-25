@@ -5,6 +5,8 @@ import electro.Main;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.util.regex.Pattern;
 
 public class ListenerCalc implements ActionListener {
 
@@ -21,12 +23,12 @@ public class ListenerCalc implements ActionListener {
         fieldEquipmentPrice = Main.gui.getParam4();
         mapToDouble();
         Double days = checkDays();
-        result = ((equipmentPrice + rentPrice) * days) - (countOfVisitors * rentPrice * days);
+        result = (((equipmentPrice + rentPrice) * days) - (countOfVisitors * ticketPrice * days));
         Main.gui.getOutputResult().setText("" + result);
-
     }
-    public double checkDays() {
-        String item = (String) Main.gui.getNumberOfDays().getSelectedItem();;
+
+    private double checkDays() {
+        String item = (String) Main.gui.getNumberOfDays().getSelectedItem();
         double days = 1;
         if (item.equals(Main.gui.getDaysArr()[1])) {
             days = 2;
@@ -44,7 +46,7 @@ public class ListenerCalc implements ActionListener {
         return days;
     }
 
-    private void  mapToDouble() {
+    private void mapToDouble() {
         countOfVisitors = Double.parseDouble(fieldVisitors.getText());
         rentPrice = Double.parseDouble(fieldRentPrice.getText());
         ticketPrice = Double.parseDouble(fieldTicketPrice.getText());
