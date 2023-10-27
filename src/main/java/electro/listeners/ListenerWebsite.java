@@ -10,6 +10,6 @@ public class ListenerWebsite implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        JOptionPane.showMessageDialog(null, PATH);
+        JOptionPane.showMessageDialog(null, PATH, "Website", JOptionPane.CLOSED_OPTION);
     }
 }

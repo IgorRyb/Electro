@@ -43,7 +43,7 @@ public class GuiMain {
         main_GUI.add(main_panel);
 
         addTextInfoLabelsOnPanel();
-        addTextFieldsOnPanelAndLimit();
+        addTextFieldsOnPanelAndSetLimit();
 
         JLabel jLabel = createLabelOnPanel(label, main_panel);
         setBoundsForLabel(jLabel, 60,0,300,30);
@@ -88,7 +88,7 @@ public class GuiMain {
         return inputVerifier;
     }
 
-    private void addTextFieldsOnPanelAndLimit() {
+    private void addTextFieldsOnPanelAndSetLimit() {
         main_panel.add(param).setBounds(400, 60, 150, 30);
         main_panel.add(param2).setBounds(400, 120, 150, 30);
         main_panel.add(param3).setBounds(400, 180, 150, 30);

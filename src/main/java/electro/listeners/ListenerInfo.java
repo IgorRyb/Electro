@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class ListenerInfo implements ActionListener {
 
-    private final String CREATORS = String.format("Студенты: \n %s \n %s", "Рыбченко Игорь", "Нуриахметов Артур");
+    private final String CREATORS = String.format("Создатели: студенты группы ЭАС-412с \n %s \n %s", "Рыбченко Игорь", "Нуриахметов Артур");
 
     private final String TITLE = "О создателях";
 

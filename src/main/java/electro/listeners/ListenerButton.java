@@ -9,7 +9,7 @@ public class ListenerButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String exitHat = "Выйти?";
+        String exitHat = "Вы хотите выйти из программы?";
         String exitLow = "Завершение работы пррограммы";
         new ExitWindowDao(exitHat, exitLow).execute();
     }
