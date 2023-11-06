@@ -1,6 +1,6 @@
 package electro.listeners;
 
-import electro.service.dao.ExitWindowDao;
+import electro.service.dao.ExitWindowService;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +11,7 @@ public class ListenerButton implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String exitHat = "Вы хотите выйти из программы?";
         String exitLow = "Завершение работы пррограммы";
-        new ExitWindowDao(exitHat, exitLow).execute();
+        new ExitWindowService(exitHat, exitLow).execute();
     }
 
 }

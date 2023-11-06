@@ -1,10 +1,10 @@
 package electro.service.dao;
 
-import electro.service.WindowDao;
+import electro.service.WindowService;
 
 import javax.swing.JOptionPane;
 
-public class ExitWindowDao implements WindowDao {
+public class ExitWindowService implements WindowService {
 
     private int exit;
 
@@ -12,7 +12,7 @@ public class ExitWindowDao implements WindowDao {
 
     private String exitLow;
 
-    public ExitWindowDao(String exitHat, String exitLow) {
+    public ExitWindowService(String exitHat, String exitLow) {
         this.exitHat = exitHat;
         this.exitLow = exitLow;
     }

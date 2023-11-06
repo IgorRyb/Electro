@@ -1,6 +1,6 @@
 package electro.service;
 
-public interface WindowDao {
+public interface WindowService {
 
     void execute();
 

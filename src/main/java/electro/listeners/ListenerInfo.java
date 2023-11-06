@@ -1,6 +1,6 @@
 package electro.listeners;
 
-import electro.service.dao.InfoWindowDao;
+import electro.service.dao.InfoWindowService;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,6 +13,6 @@ public class ListenerInfo implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        new InfoWindowDao(CREATORS, TITLE).execute();
+        new InfoWindowService(CREATORS, TITLE).execute();
     }
 }

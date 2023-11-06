@@ -1,15 +1,15 @@
 package electro.service.dao;
 
-import electro.service.WindowDao;
+import electro.service.WindowService;
 
 import javax.swing.*;
 
-public class InfoWindowDao implements WindowDao {
+public class InfoWindowService implements WindowService {
     private String creators;
 
     private String title;
 
-    public InfoWindowDao(String creators, String title) {
+    public InfoWindowService(String creators, String title) {
         this.creators = creators;
         this.title = title;
     }
