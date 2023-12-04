@@ -29,7 +29,7 @@ public class GuiMain {
 
     private JFrame main_GUI;
     private JPanel main_panel;
-    private final String TITLE = "Electro";
+    private final String TITLE = "ourElectro";
 
     public GuiMain(String name, String label) {
         this.main_GUI = new JFrame(TITLE);

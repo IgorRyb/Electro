@@ -1,4 +1,4 @@
-package electro.service.dao;
+package electro.service.impl;
 
 import electro.service.WindowService;
 

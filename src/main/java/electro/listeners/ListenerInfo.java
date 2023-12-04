@@ -1,6 +1,6 @@
 package electro.listeners;
 
-import electro.service.dao.InfoWindowService;
+import electro.service.impl.InfoWindowService;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -8,6 +8,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/electro/model/GuiMain.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/electro/service/OneTarif.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/main/java/electro/service/TwoTarif.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/main/java/electro/service/dao/InfoWindowService.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/java/electro/service/impl/InfoWindowService.java" charset="windows-1251" />
   </component>
 </project>
