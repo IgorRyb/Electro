@@ -8,7 +8,7 @@ public class Main {
 
     private static final String NAME = "Калькулятор расчета стоимости мероприятия. Выставка";
 
-    private static final String LABEL = "Введите данные для расчета!!";
+    private static final String LABEL = "Введите данные для расчета!!!";
 
     public static void main(String[] args) {
         gui = new GuiMain(NAME, LABEL);
